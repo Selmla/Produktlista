@@ -13,13 +13,13 @@ while (true)
         Console.WriteLine("Ogiltig inmatning. Försök igen.");
         continue;
     }
-    else if (userInput.Trim().ToLower() == "exit") //ha denna manipulationen utanför kanske
+    else if (userInput.Trim().ToLower() == "exit")
     {
         break;
     }
     else
     {
-        string sanitizedInput = userInput.Trim().ToUpper(); // bygga ut denna
+        string sanitizedInput = userInput.Trim().ToUpper();
         bool isValid = Validate(sanitizedInput);
 
         if (isValid)
@@ -30,7 +30,7 @@ while (true)
 
 }
 
-bool Validate(string sanitizedInput) //hantera edgecase om första delen är tom tex
+bool Validate(string sanitizedInput)
 {
     var parts = sanitizedInput.Split('-');
 
